@@ -31,8 +31,17 @@ public class TestFindSecondMinInArray {
 	    
 	    @Test
 	    public void testFindSecondMinPositiveValues() {	
-	    	int[] arr = {5,33,3};
+	    	int[] arr = {5,2};
 	    	assertEquals(FindSecondMinInArray.findSecondMin(arr),5);
+	    }
+	    
+	    @Test
+	    public void testFindSecondMinOneDuplicateValue() {	
+	    	int[] arr = {5,5};
+			Throwable thrown = assertThrows(NullPointerException.class, () -> {
+				   FindSecondMinInArray.findSecondMin(arr);
+			     });
+			assertNotNull(thrown.getMessage());
 	    }
 	    
 	    @Test

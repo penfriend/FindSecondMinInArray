@@ -19,6 +19,9 @@ public class FindSecondMinInArray {
 					minSecond = arr[i];
 				}
 			}
+			 if(minSecond==minFirst) {
+	            	throw new IllegalArgumentException("IllegalArgumentException: there are same item values in array");
+	            }
 		return minSecond;
 	    }
 }
